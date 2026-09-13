@@ -1,0 +1,43 @@
+SYNTHETIC DOCUMENT — University Student Handbook
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+1. Student Registration
+
+Students must complete registration before the beginning of each academic semester. Registration requires a valid student identification number and confirmation of the assigned programme. Students who fail to register by the published deadline may need approval from the academic office.
+
+2. Attendance
+
+Students are expected to attend scheduled lectures, laboratories, tutorials and other compulsory academic activities. Individual courses may define additional attendance requirements. Students should consult the relevant course information before the semester begins.
+
+3. Student Identification
+
+Students should carry their university identification card when using laboratories, libraries, examination halls and other restricted facilities. Lost cards should be reported to the student services office.
+
+4. Academic Advising
+
+Each student may consult an assigned academic adviser about course selection, academic progress and general study planning. Advisers do not replace formal approval procedures.
+
+5. Library Access
+
+Registered students may use university library services during published opening hours. Library borrowing privileges depend on the student's account status and applicable library rules.
+
+6. Student Conduct
+
+Students are expected to behave respectfully toward staff and other students. Academic facilities must be used responsibly. Misuse of university systems may be referred to the appropriate disciplinary authority.
+
+7. Communication
+
+Official academic notices are published through designated university communication channels. Students are responsible for checking those channels regularly.
+
+8. Semester Changes
+
+Changes to course registration, programme information or personal records should be submitted through the designated academic office within the published period.
+
+9. Support Services
+
+Students may seek assistance from academic advising, library services, counselling services, career services and student welfare offices.
+
+10. Graduation Clearance
+
+Students approaching graduation must complete academic and administrative clearance requirements before the final certification process.

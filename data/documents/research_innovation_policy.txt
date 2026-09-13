@@ -1,0 +1,43 @@
+SYNTHETIC DOCUMENT — Research and Innovation Policy
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+1. Research Principles
+
+Research activities should follow principles of integrity, transparency, responsible conduct and appropriate documentation.
+
+2. Research Proposals
+
+Researchers should prepare proposals that clearly describe objectives, methodology, expected outcomes and resource requirements.
+
+3. Ethics
+
+Research involving human participants, personal data or other regulated subjects may require ethics review before data collection begins.
+
+4. Data Management
+
+Research data should be stored securely and managed according to applicable institutional requirements. Researchers should document important processing decisions.
+
+5. Reproducibility
+
+Researchers are encouraged to maintain versioned code, experiment records, datasets or dataset descriptions and configuration information where appropriate.
+
+6. Publications
+
+Research outputs should accurately acknowledge contributors, supporting institutions and relevant sources.
+
+7. Intellectual Property
+
+Ownership and use of research outputs may depend on institutional agreements, funding conditions and applicable law.
+
+8. Innovation
+
+Innovation projects may be supported through laboratories, mentorship programmes, competitions and collaboration opportunities.
+
+9. Collaboration
+
+External research collaborations should follow applicable approval and agreement procedures.
+
+10. Research Reporting
+
+Researchers may be required to submit progress reports, final reports or other documentation according to the conditions of the relevant project.

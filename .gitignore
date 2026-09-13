@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment/secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python testing/cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ML/model/cache files
+.cache/
+huggingface/
+*.bin
+*.safetensors
+*.pt
+*.pth
+
+# Generated indexes
+*.faiss
+data/index/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+dist/
+
+# Temporary files
+*.tmp
+*.temp

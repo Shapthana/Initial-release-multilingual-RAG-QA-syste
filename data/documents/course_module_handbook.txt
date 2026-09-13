@@ -1,0 +1,43 @@
+SYNTHETIC DOCUMENT — Course and Module Handbook
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+1. Module Structure
+
+Each module has a module code, title, credit value, learning outcomes and assessment structure. Students should review the module description before selecting a module.
+
+2. Learning Outcomes
+
+Learning outcomes describe the knowledge, skills and abilities expected after successful completion of a module.
+
+3. Assessment
+
+Assessment may include assignments, laboratory work, projects, presentations, quizzes and examinations. The exact weighting is specified in the module information.
+
+4. Coursework Submission
+
+Coursework must normally be submitted through the platform or method specified by the module coordinator. Students should retain evidence of successful submission.
+
+5. Late Work
+
+Late-submission rules are defined by the relevant module. A student who expects difficulty meeting a deadline should contact the coordinator before the deadline where possible.
+
+6. Laboratory Work
+
+Laboratory modules may require preparation before attendance. Students should follow laboratory safety instructions and bring required materials.
+
+7. Group Projects
+
+For group projects, each member is expected to contribute to the assigned work. Assessment may include both group and individual components.
+
+8. Module Feedback
+
+Students may receive written, oral or digital feedback on assessments. Feedback should be used to improve subsequent work.
+
+9. Academic Integrity
+
+Submitted work must represent the student's own permitted contribution. Sources should be acknowledged according to the requirements of the module.
+
+10. Module Completion
+
+Students normally complete a module by satisfying its assessment and participation requirements. Final grades are issued according to the applicable academic regulations.

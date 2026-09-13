@@ -1,0 +1,45 @@
+SYNTHETIC DOCUMENT — Academic Calendar
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+Academic Year 2026
+
+1. Registration
+
+Semester 1 registration: 5 January 2026 to 16 January 2026.
+
+2. Semester 1 Teaching
+
+Semester 1 teaching begins on 19 January 2026 and ends on 24 April 2026.
+
+3. Semester 1 Examinations
+
+Semester 1 examinations are scheduled from 4 May 2026 to 22 May 2026.
+
+4. Inter-Semester Break
+
+The inter-semester break is scheduled from 25 May 2026 to 5 June 2026.
+
+5. Semester 2 Registration
+
+Semester 2 registration takes place from 8 June 2026 to 19 June 2026.
+
+6. Semester 2 Teaching
+
+Semester 2 teaching begins on 22 June 2026 and ends on 25 September 2026.
+
+7. Semester 2 Examinations
+
+Semester 2 examinations are scheduled from 5 October 2026 to 23 October 2026.
+
+8. Results
+
+Results are released after completion of the required academic approval procedures. The exact release date may be announced separately.
+
+9. Public Holidays
+
+Teaching and examination schedules may be adjusted when public holidays or officially declared closures affect academic activities.
+
+10. Calendar Updates
+
+Students should consult the latest official calendar notice because dates may be revised by the academic authority.

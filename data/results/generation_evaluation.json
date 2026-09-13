@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "questions": 3,
+    "language_distribution": {
+      "en": 3
+    },
+    "retrieval_method": "BM25 + E5 + RRF",
+    "top_k": 5,
+    "mean_answer_token_f1": 0.5662,
+    "mean_context_word_support": 0.6521,
+    "mean_citation_grounding_proxy": 0.342,
+    "mean_retrieval_latency_ms": 64.7833,
+    "mean_generation_latency_ms": 112492.42
+  },
+  "evaluation_notes": [
+    "This is a small representative generation evaluation.",
+    "The representative evaluation contains up to 12 questions: 4 English, 4 Sinhala and 4 Tamil.",
+    "The --limit option can be used after representative selection for debugging or small pilot runs.",
+    "Generation evaluation uses BM25 and E5 multilingual embeddings with Reciprocal Rank Fusion (RRF).",
+    "The top 5 retrieved contexts are provided to the answer generator.",
+    "answer_token_f1 is a lexical correctness proxy.",
+    "context_word_support is a deterministic grounding proxy.",
+    "citation_grounding_proxy is a deterministic citation-support proxy.",
+    "These deterministic metrics are not human-validated faithfulness measures.",
+    "LLM judge scores, when enabled, are model-based and should be reported as such.",
+    "The benchmark corpus is controlled and synthetic and should not be treated as production-scale evidence."
+  ],
+  "results": [
+    {
+      "id": "q001",
+      "language": "en",
+      "question_type": null,
+      "question": "What are the university library hours on weekdays?",
+      "reference_answer": "The university library is open from 8:00 AM to 10:00 PM on weekdays.",
+      "answer": "The university library is open from 8:00 AM to 10:00 PM on weekdays [1].",
+      "answer_token_f1": 0.9677,
+      "context_word_support": 1.0,
+      "citation_ids": [
+        1
+      ],
+      "citation_grounding_proxy": 0.9333,
+      "retrieval_latency_ms": 88.04,
+      "generation_latency_ms": 98297.09,
+      "sources": [
+        "sample_multilingual_handbook.txt",
+        "library_regulations.txt",
+        "university_student_handbook.txt",
+        "library_regulations.txt",
+        "university_student_handbook.txt"
+      ]
+    },
+    {
+      "id": "q002",
+      "language": "en",
+      "question_type": null,
+      "question": "When does the library open on weekdays?",
+      "reference_answer": "The university library opens at 8:00 AM on weekdays.",
+      "answer": "The library opens from 8:00 AM to 10:00 PM on weekdays [",
+      "answer_token_f1": 0.6957,
+      "context_word_support": 0.8,
+      "citation_ids": [],
+      "citation_grounding_proxy": 0.0,
+      "retrieval_latency_ms": 45.34,
+      "generation_latency_ms": 120464.37,
+      "sources": [
+        "sample_multilingual_handbook.txt",
+        "library_regulations.txt",
+        "library_regulations.txt",
+        "sample_multilingual_handbook.txt",
+        "university_student_handbook.txt"
+      ]
+    },
+    {
+      "id": "q003",
+      "language": "en",
+      "question_type": null,
+      "question": "When does the university library close from Monday to Friday?",
+      "reference_answer": "The university library closes at 10:00 PM on weekdays.",
+      "answer": "I need to pick one citation number. Since [1] is the first source that provides this information clearly, and [2] confirms it too, but the instruction says to include one citation number. I'll go with [1] as it's the primary source mentioned in the context.",
+      "answer_token_f1": 0.0351,
+      "context_word_support": 0.1562,
+      "citation_ids": [
+        1,
+        2,
+        1
+      ],
+      "citation_grounding_proxy": 0.0926,
+      "retrieval_latency_ms": 60.97,
+      "generation_latency_ms": 118715.8,
+      "sources": [
+        "sample_multilingual_handbook.txt",
+        "library_regulations.txt",
+        "university_student_handbook.txt",
+        "sample_multilingual_handbook.txt",
+        "academic_calendar.txt"
+      ]
+    }
+  ]
+}
