@@ -1,0 +1,2 @@
+experiment_id,dataset_version,language,chunk_size,overlap,retrieval_method,embedding_model,top_k,recall_at_5,recall_at_10,mrr,ndcg_at_10,answer_accuracy,faithfulness,latency_ms,observations
+EXP001,v1,en,500,80,hybrid,paraphrase-multilingual-MiniLM-L12-v2,5,,,,,,,,Baseline - fill with measured results
