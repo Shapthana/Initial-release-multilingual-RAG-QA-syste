@@ -286,40 +286,21 @@ The evaluation benchmark contains:
 
 ## Project Structure
 
+The repository is organized at the project root as follows:
+
 ```text
-backend/
-├── app/
-│   ├── api/
-│   ├── services/
-│   │   ├── chunker.py
-│   │   ├── evaluator.py
-│   │   ├── generator.py
-│   │   ├── loader.py
-│   │   ├── reranker.py
-│   │   └── retrieval.py
-│   ├── config.py
-│   └── main.py
-│
-├── data/
-│   ├── documents/
-│   ├── evaluation/
-│   └── results/
-│
-├── scripts/
-│   ├── evaluate.py
-│   ├── evaluate_generation.py
-│   ├── failure_analysis.py
-│   ├── ingest.py
-│   ├── run_experiments.py
-│   ├── run_full_research.py
-│   └── validate_evaluation.py
-│
-├── tests/
-│   ├── test_metrics.py
-│   └── test_retrieval_logic.py
-│
-├── requirements.txt
-└── README.md
+Initial-release-multilingual-RAG-QA-syste/
+├── app/                  # Application source modules
+├── backend/              # Backend runtime and service scripts
+├── data/                 # Documents, evaluation data, indexes and results
+├── docs/                 # Research and project documentation
+├── experiments/          # Retrieval and evaluation experiments
+├── frontend/             # Frontend application
+├── scripts/              # Supporting scripts
+├── tests/                # Automated tests
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+└── .gitignore
 ```
 
 ---
@@ -344,11 +325,18 @@ python -m venv .venv
 
 ### 3. Install dependencies
 
-From the `backend` directory:
+The repository-level `requirements.txt` contains the Python dependencies.
+
+From the repository root:
+
+```powershell
+pip install -r requirements.txt
+```
+
+### 4. Enter the backend directory
 
 ```powershell
 cd backend
-pip install -r requirements.txt
 ```
 
 ---
@@ -366,6 +354,8 @@ This prepares the document chunks and retrieval index used by the evaluation pip
 ---
 
 ## Validate Evaluation Data
+
+From the `backend` directory:
 
 ```powershell
 python scripts\validate_evaluation.py
@@ -510,6 +500,5 @@ The project therefore treats retrieval as an independently measurable research p
 Computer Engineering Undergraduate
 University of Jaffna
 
-GitHub:
-
+GitHub repository:
 https://github.com/Shapthana/Initial-release-multilingual-RAG-QA-syste
