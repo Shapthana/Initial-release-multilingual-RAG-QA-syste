@@ -325,8 +325,6 @@ python -m venv .venv
 
 ### 3. Install dependencies
 
-The repository-level `requirements.txt` contains the Python dependencies.
-
 From the repository root:
 
 ```powershell
@@ -351,7 +349,6 @@ python scripts\ingest.py
 
 This prepares the document chunks and retrieval index used by the evaluation pipeline.
 
----
 
 ## Validate Evaluation Data
 
