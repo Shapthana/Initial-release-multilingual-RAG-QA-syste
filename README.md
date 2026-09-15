@@ -287,7 +287,6 @@ The evaluation benchmark contains:
 ## Project Structure
 
 The repository is organized at the project root as follows:
-
 ```text
 Initial-release-multilingual-RAG-QA-syste/
 ├── app/                  # Application source modules
