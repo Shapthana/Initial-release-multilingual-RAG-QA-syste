@@ -2,19 +2,21 @@
 
 A research-oriented Retrieval-Augmented Generation (RAG) system for multilingual document question answering across **English, Sinhala, and Tamil**.
 
-The project focuses primarily on **retrieval quality, multilingual robustness, controlled experimentation, and systematic evaluation**, rather than treating generation quality as the only measure of a RAG system.
+The project investigates **retrieval quality, multilingual robustness, controlled experimentation, and systematic evaluation** within a RAG pipeline. The primary focus is retrieval evaluation rather than treating generated-answer quality as the only measure of RAG performance.
 
 ## Research Objective
 
-The main objective is to investigate how different information-retrieval strategies perform for multilingual question answering, particularly when English, Sinhala, and Tamil queries are used.
+The main research question is:
 
-The system compares:
+> How do lexical, dense, and hybrid retrieval methods compare for multilingual document question answering across English, Sinhala, and Tamil?
+
+The system evaluates:
 
 * BM25 lexical retrieval
 * Multilingual dense retrieval using E5 embeddings
 * Weighted hybrid retrieval
 * Reciprocal Rank Fusion (RRF)
-* Optional cross-encoder reranking
+* Optional multilingual cross-encoder reranking
 
 Retrieval performance is evaluated using:
 
@@ -23,23 +25,25 @@ Retrieval performance is evaluated using:
 * Mean Reciprocal Rank (MRR)
 * nDCG@10
 
+The experiments also investigate **language-specific retrieval behaviour and retrieval failures**.
+
+---
+
 ## System Architecture
 
 ```text
+                         User Question
+                              │
+                              ▼
                     ┌─────────────────────┐
-                    │   User Question     │
-                    └──────────┬──────────┘
-                               │
-                               ▼
-                    ┌─────────────────────┐
-                    │ Query Processing    │
+                    │  Query Processing   │
                     └──────────┬──────────┘
                                │
                  ┌─────────────┴─────────────┐
                  ▼                           ▼
         ┌────────────────┐          ┌────────────────┐
         │ BM25 Retrieval │          │ Dense Retrieval│
-        │   (Lexical)    │          │  (E5 + FAISS) │
+        │    Lexical     │          │  E5 + FAISS   │
         └───────┬────────┘          └────────┬───────┘
                 │                            │
                 └────────────┬───────────────┘
@@ -60,47 +64,55 @@ Retrieval performance is evaluated using:
                               │
                               ▼
                    ┌─────────────────────┐
-                   │ LLM Generation      │
-                   │     Qwen3-4B        │
+                   │   Qwen3-4B / LLM    │
+                   │     Generation      │
                    └─────────────────────┘
 ```
 
-## Languages
+---
 
-| Language  | Evaluation Questions |
-| --------- | -------------------: |
-| English   |                   20 |
-| Sinhala   |                   20 |
-| Tamil     |                   20 |
-| **Total** |               **60** |
+## Multilingual Benchmark
 
-The evaluation benchmark contains **60 questions**, distributed equally across the three languages.
+The controlled evaluation benchmark contains **60 questions**, equally distributed across the three languages.
+
+| Language  | Questions |
+| --------- | --------: |
+| English   |        20 |
+| Sinhala   |        20 |
+| Tamil     |        20 |
+| **Total** |    **60** |
+
+The benchmark was designed to compare retrieval methods under the same evaluation conditions and to investigate language-specific differences.
+
+---
 
 ## Retrieval Benchmark
 
-The main benchmark compares BM25, multilingual dense retrieval, Reciprocal Rank Fusion, and weighted hybrid retrieval.
+The primary benchmark compares BM25, dense E5 retrieval, RRF, and weighted hybrid retrieval.
 
-| Method        |   Recall@5 |  Recall@10 |        MRR |    nDCG@10 |
-| ------------- | ---------: | ---------: | ---------: | ---------: |
-| BM25          |     0.9167 |     0.9667 |     0.8466 |     0.8755 |
-| Dense E5      |     0.8167 |     0.8333 |     0.5372 |     0.6090 |
-| E5 + RRF      |     0.8833 |     0.9667 |     0.7382 |     0.7932 |
-| Hybrid α=0.50 | **0.9667** | **0.9667** | **0.8583** | **0.8867** |
+| Method            |   Recall@5 |  Recall@10 |        MRR |    nDCG@10 |
+| ----------------- | ---------: | ---------: | ---------: | ---------: |
+| BM25              |     0.9167 |     0.9667 |     0.8466 |     0.8755 |
+| Dense E5          |     0.8167 |     0.8333 |     0.5372 |     0.6090 |
+| E5 + RRF          |     0.8833 |     0.9667 |     0.7382 |     0.7932 |
+| **Hybrid α=0.50** | **0.9667** | **0.9667** | **0.8583** | **0.8867** |
 
 ### Main Finding
 
-The **weighted hybrid configuration with α = 0.50 produced the strongest overall ranking quality** among the tested configurations.
+The **weighted hybrid configuration with α = 0.50 achieved the strongest overall retrieval performance** among the tested configurations.
 
-It achieved:
+Results:
 
-* Recall@5: **0.9667**
-* Recall@10: **0.9667**
-* MRR: **0.8583**
-* nDCG@10: **0.8867**
+* **Recall@5:** 0.9667
+* **Recall@10:** 0.9667
+* **MRR:** 0.8583
+* **nDCG@10:** 0.8867
 
-The result suggests that combining lexical BM25 signals with multilingual dense retrieval can provide a more robust ranking than relying on dense retrieval alone.
+The experiment shows that combining lexical and semantic retrieval signals can improve ranking quality compared with using dense retrieval alone.
 
-BM25 remained highly competitive, while dense retrieval alone showed substantially lower MRR and nDCG on this controlled benchmark.
+An important finding was that **BM25 remained highly competitive**, while dense retrieval alone showed substantially lower MRR and nDCG on this controlled multilingual benchmark.
+
+---
 
 ## Hybrid Retrieval Experiment
 
@@ -111,32 +123,34 @@ Hybrid Score =
 (1 − α) × BM25 + α × Dense
 ```
 
-Different α values were evaluated to investigate the contribution of lexical and semantic retrieval.
+The following α values were investigated:
 
-|    α | Interpretation        |
-| ---: | --------------------- |
-| 0.00 | BM25 only             |
-| 0.25 | BM25-dominant hybrid  |
-| 0.50 | Balanced hybrid       |
-| 0.75 | Dense-dominant hybrid |
-| 1.00 | Dense only            |
+|        α | Configuration         |
+| -------: | --------------------- |
+|     0.00 | BM25 only             |
+|     0.25 | BM25-dominant hybrid  |
+| **0.50** | **Balanced hybrid**   |
+|     0.75 | Dense-dominant hybrid |
+|     1.00 | Dense only            |
 
-The best tested configuration was:
+The strongest tested configuration was:
 
 **α = 0.50**
 
-This configuration achieved:
+with:
 
 * Recall@5: **0.9667**
 * Recall@10: **0.9667**
 * MRR: **0.8583**
 * nDCG@10: **0.8867**
 
-This experiment provides evidence that the two retrieval approaches contain complementary information.
+This result supports the hypothesis that lexical and semantic retrieval provide complementary signals for multilingual question answering.
+
+---
 
 ## Reciprocal Rank Fusion
 
-Reciprocal Rank Fusion (RRF) was evaluated as an alternative rank-based fusion strategy.
+Reciprocal Rank Fusion (RRF) was evaluated as a rank-based alternative to weighted score fusion.
 
 The tested RRF configuration achieved:
 
@@ -145,68 +159,78 @@ The tested RRF configuration achieved:
 * MRR: **0.7382**
 * nDCG@10: **0.7932**
 
-Although RRF successfully combined retrieval rankings, it did not outperform the best weighted hybrid configuration on this benchmark.
+RRF provided a useful comparison, but it did **not** outperform the best weighted hybrid configuration in this benchmark.
 
-Therefore, the project reports the **α=0.50 weighted hybrid** as the strongest tested configuration rather than selecting RRF simply because it is a common fusion technique.
+This is reported as an experimental finding rather than assuming that a commonly used fusion method must perform best.
+
+---
 
 ## Language-Specific Analysis
 
-The experiments also examined differences between English, Sinhala, and Tamil retrieval.
+The benchmark was also analysed by language to identify retrieval behaviour that can be hidden by aggregate metrics.
 
 ### English
 
 English queries generally benefited from both lexical and semantic retrieval signals.
 
-The controlled benchmark was used to compare how ranking behaviour changed between BM25, dense, and hybrid retrieval.
+The experiments were used to compare how BM25, dense retrieval, and hybrid retrieval changed the ranking of relevant document chunks.
 
 ### Sinhala
 
-Sinhala was an important retrieval challenge.
+Sinhala represented an important retrieval challenge.
 
-Dense retrieval showed weaker ranking behaviour than BM25 on the controlled benchmark, while hybrid retrieval benefited from combining lexical and semantic signals.
+Dense retrieval showed weaker ranking behaviour than BM25 in the controlled benchmark. Several Sinhala queries demonstrated cases where BM25 ranked the relevant chunk highly while dense retrieval ranked it considerably lower.
 
-This highlights the importance of evaluating multilingual retrieval separately by language rather than relying only on an aggregate score.
+This suggests that lexical matching can provide useful signals for Sinhala queries that are not consistently captured by multilingual dense embeddings.
 
 ### Tamil
 
 Tamil retrieval also showed strong lexical retrieval behaviour in several evaluated cases.
 
-The failure analysis included Tamil queries where BM25 and dense retrieval produced noticeably different rankings, demonstrating that the retrieval methods captured different signals.
+The failure analysis identified Tamil queries where BM25 and dense retrieval produced substantially different rankings, demonstrating that the two retrieval methods captured different signals.
+
+---
 
 ## Retrieval Failure Analysis
 
-A dedicated failure-analysis experiment was conducted over the 60-question benchmark.
+A dedicated failure-analysis experiment was conducted over the **60-question benchmark**.
 
 The analysis identified **23 notable retrieval cases**, including:
 
 * BM25-only ranking advantages
 * BM25 vs. dense ranking differences
-* Sinhala queries where BM25 ranked the relevant chunk highly while dense retrieval ranked it substantially lower
-* Tamil queries where lexical matching provided useful ranking signals
+* Sinhala queries where BM25 ranked relevant content highly while dense retrieval ranked it lower
+* Tamil queries showing different lexical and semantic ranking behaviour
 
-For example, several Sinhala queries showed a relevant chunk ranked near the top by BM25 but considerably lower by dense retrieval.
+The failure analysis was used to understand **why** aggregate retrieval metrics differed rather than reporting only final scores.
 
-These cases support the motivation for investigating hybrid retrieval rather than assuming that semantic embeddings will always outperform lexical retrieval.
+A key observation was that dense retrieval did not consistently outperform lexical retrieval for Sinhala queries, supporting the investigation of hybrid retrieval.
+
+---
 
 ## Reranking Experiment
 
-A multilingual cross-encoder reranker was also investigated using:
+An optional multilingual cross-encoder reranker was investigated using:
 
 ```text
 cross-encoder/mmarco-mMiniLMv2-L12-H384-v1
 ```
 
-The reranking experiment did not consistently improve retrieval performance on the tested configuration.
+The reranking experiment did **not consistently improve retrieval performance** on the tested configuration.
 
-This was treated as a useful **negative/limited experiment** rather than selecting a more complex model simply because it was expected to perform better.
+Rather than selecting a more complex model simply because it was expected to perform better, the experiment was retained as a **negative/limited result**.
 
-The result demonstrates an important research principle: additional model complexity should be supported by measured improvement.
+This provides evidence for an important research principle:
+
+> Additional model complexity should be supported by measured improvement.
+
+---
 
 ## Generation Experiment
 
-The project also integrates **Qwen3-4B through Ollama** for local answer generation.
+The system integrates **Qwen3-4B through Ollama** for local answer generation.
 
-Generation evaluation was conducted as a preliminary experiment using:
+Generation was evaluated using:
 
 * Token F1
 * Context word support
@@ -214,15 +238,17 @@ Generation evaluation was conducted as a preliminary experiment using:
 * Retrieval latency
 * Generation latency
 
-The generation experiment was conducted on a **12-question exploratory subset**, rather than being treated as a full 60-question generation benchmark.
+Generation evaluation was conducted on a **12-question exploratory subset**.
 
-The results varied substantially between questions, including occasional incomplete responses and reasoning-text leakage.
+The experiment showed substantial variation between questions, including occasional incomplete responses and reasoning-text leakage.
 
-Therefore, generation metrics are treated as **preliminary evidence**, while retrieval metrics form the primary evaluation of the research project.
+Therefore, generation results are treated as **preliminary evidence**, while the 60-question retrieval benchmark remains the primary evaluation of the research project.
+
+---
 
 ## Evaluation Data
 
-The project contains:
+The project contains a controlled synthetic document corpus and multilingual evaluation dataset.
 
 ```text
 data/
@@ -248,15 +274,15 @@ data/
     └── retrieval_benchmark.json
 ```
 
-The document corpus is a **synthetic research corpus** created for controlled experimentation.
+The document corpus is a **synthetic research corpus created for controlled experimentation**.
 
-The evaluation dataset contains 60 questions:
+The evaluation benchmark contains:
 
-* 20 English
-* 20 Sinhala
-* 20 Tamil
+* 20 English questions
+* 20 Sinhala questions
+* 20 Tamil questions
 
-The benchmark was designed to allow controlled comparison of retrieval methods and analysis of language-specific behaviour.
+---
 
 ## Project Structure
 
@@ -296,6 +322,8 @@ backend/
 └── README.md
 ```
 
+---
+
 ## Installation
 
 ### 1. Clone the repository
@@ -316,38 +344,48 @@ python -m venv .venv
 
 ### 3. Install dependencies
 
-```powershell
-pip install -r requirements.txt
-```
-
-## Build the Retrieval Index
-
-From the backend directory:
+From the `backend` directory:
 
 ```powershell
 cd backend
+pip install -r requirements.txt
+```
+
+---
+
+## Build the Retrieval Index
+
+From the `backend` directory:
+
+```powershell
 python scripts\ingest.py
 ```
 
 This prepares the document chunks and retrieval index used by the evaluation pipeline.
 
-## Run Retrieval Evaluation
+---
 
-Validate the evaluation data:
+## Validate Evaluation Data
 
 ```powershell
 python scripts\validate_evaluation.py
 ```
 
-Run the benchmark:
+---
+
+## Run Retrieval Evaluation
 
 ```powershell
 python scripts\evaluate.py
 ```
 
+The evaluation reports retrieval metrics including Recall@5, Recall@10, MRR, and nDCG@10.
+
+---
+
 ## Run Research Experiments
 
-The project also includes scripts for running retrieval experiments:
+To run the retrieval experiments:
 
 ```powershell
 python scripts\run_experiments.py
@@ -359,23 +397,27 @@ For the complete research workflow:
 python scripts\run_full_research.py
 ```
 
+---
+
 ## Run Tests
 
-Install pytest if it is not already installed:
+Install pytest if necessary:
 
 ```powershell
 pip install pytest
 ```
 
-Then run:
+Then:
 
 ```powershell
 python -m pytest -q
 ```
 
-## Generation
+---
 
-The project can use Ollama for local LLM generation.
+## Local Generation
+
+The project supports local LLM generation using Ollama.
 
 The tested model was:
 
@@ -383,26 +425,30 @@ The tested model was:
 Qwen3-4B
 ```
 
-Generation experiments can be run using:
+Generation evaluation can be run with:
 
 ```powershell
 python scripts\evaluate_generation.py
 ```
 
-Generation evaluation is intentionally treated as exploratory because the current experiment uses a smaller subset than the primary retrieval benchmark.
+The generation experiment is exploratory and should not be interpreted as a full 60-question generation benchmark.
+
+---
 
 ## Research Limitations
 
-The current evaluation has several limitations:
+The current study has several limitations:
 
 1. The benchmark contains 60 questions and is relatively small.
 2. The document corpus is synthetic and controlled rather than a large real-world collection.
-3. Sinhala and Tamil retrieval require further investigation on larger and more diverse datasets.
-4. Generation evaluation is preliminary and was performed on a smaller exploratory subset.
+3. Sinhala and Tamil retrieval require further investigation using larger and more diverse datasets.
+4. Generation evaluation is preliminary and uses a smaller exploratory subset.
 5. Cross-encoder reranking did not consistently improve the tested configuration.
-6. The current benchmark does not establish generalisation to large-scale real-world document collections.
+6. The current benchmark does not establish generalisation to large-scale real-world multilingual collections.
 
-These limitations are important because the reported results should be interpreted as evidence from a controlled research experiment rather than as a universal ranking of retrieval methods.
+The reported results should therefore be interpreted as findings from a **controlled research experiment**, not as a universal ranking of retrieval methods.
+
+---
 
 ## Future Work
 
@@ -410,26 +456,33 @@ Future experiments could investigate:
 
 * Larger multilingual document collections
 * More Sinhala and Tamil evaluation questions
-* Human evaluation of answer faithfulness and correctness
 * Stronger multilingual embedding models
 * Alternative reranking models
 * Query expansion
 * Language-specific retrieval strategies
+* Human evaluation of answer faithfulness and correctness
 * More robust citation evaluation
 * Larger-scale latency and memory benchmarking
 * Evaluation on real-world multilingual documents
 
+---
+
 ## Research Takeaway
 
-The experiments show that multilingual RAG retrieval should not be evaluated using a single retrieval method or a single aggregate metric.
+The experiments demonstrate that multilingual RAG retrieval should not be evaluated using a single retrieval method or a single aggregate metric.
 
-In this controlled benchmark, **BM25 and dense retrieval exhibited different strengths**, with BM25 remaining highly competitive and dense retrieval showing weaker ranking quality when used alone.
+In this controlled benchmark:
 
-The **α=0.50 weighted hybrid configuration achieved the strongest overall retrieval performance among the tested configurations**, demonstrating the potential value of combining lexical and semantic signals.
+* **BM25 remained highly competitive**
+* **Dense retrieval alone showed weaker ranking quality**
+* **Lexical and semantic retrieval exhibited complementary behaviour**
+* **Hybrid α=0.50 achieved the strongest overall retrieval performance**
+* **Sinhala highlighted an important weakness of dense retrieval**
+* **Failure analysis revealed meaningful ranking differences between retrieval methods**
 
-The language-specific analysis also showed why multilingual retrieval should be examined beyond aggregate metrics, particularly for Sinhala and Tamil queries.
+The project therefore treats retrieval as an independently measurable research problem within a RAG pipeline, using controlled experiments, quantitative metrics, language-specific analysis, and failure analysis.
 
-The project therefore treats retrieval as an independently measurable research problem within a RAG pipeline rather than evaluating the system only through generated answers.
+---
 
 ## Technologies
 
@@ -440,13 +493,15 @@ The project therefore treats retrieval as an independently measurable research p
 * Sentence Transformers
 * E5 embeddings
 * Multilingual NLP
-* Cross-encoder reranking
 * Reciprocal Rank Fusion
+* Cross-encoder reranking
 * Ollama
 * Qwen3-4B
 * NumPy
 * scikit-learn
 * Pytest
+
+---
 
 ## Author
 
