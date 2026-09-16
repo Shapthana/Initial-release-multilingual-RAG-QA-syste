@@ -1,0 +1,43 @@
+SYNTHETIC DOCUMENT — Faculty Handbook
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+1. Faculty Administration
+
+Each faculty is supported by academic and administrative offices responsible for programme coordination, student records and academic services.
+
+2. Departments
+
+Departments coordinate teaching, laboratory activities, research and other academic functions within their areas.
+
+3. Programme Coordination
+
+Programme coordinators oversee academic planning and coordinate module information with relevant departments.
+
+4. Laboratory Facilities
+
+Laboratories should be used according to safety procedures and authorized access conditions. Equipment must be handled responsibly.
+
+5. Academic Advising
+
+Departments may assign academic advisers to support students with programme planning and academic progress.
+
+6. Research Groups
+
+Faculty members and students may participate in research groups according to the requirements of the relevant department or project.
+
+7. Seminars
+
+Academic seminars may be organized to share research findings, professional knowledge and technical developments.
+
+8. Student Projects
+
+Departments may establish project guidelines covering supervision, milestones, assessment and submission.
+
+9. Industry Engagement
+
+Faculties may collaborate with external organizations for internships, projects, guest lectures and research activities subject to applicable approval.
+
+10. Administrative Requests
+
+Students should submit faculty-level requests through the designated departmental or faculty office.

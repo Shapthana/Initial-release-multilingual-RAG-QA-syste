@@ -1,0 +1,43 @@
+SYNTHETIC DOCUMENT — Institutional Services Guide
+Created for controlled multilingual RAG evaluation.
+NOT an official university publication.
+
+1. Student Services
+
+The student services office assists with general administrative enquiries, student records and selected support requests.
+
+2. Academic Office
+
+The academic office handles programme-related administrative processes, registration matters and selected academic records.
+
+3. Information Technology Services
+
+IT services support university computing facilities, network access and selected digital platforms.
+
+4. Network Accounts
+
+Students may receive institutional credentials for authorized digital services. Credentials should not be shared with other people.
+
+5. Help Desk
+
+Technical problems should be reported through the designated IT help-desk process with sufficient information to identify the problem.
+
+6. Career Services
+
+Career services may provide internship information, employment preparation, CV guidance and career-development activities.
+
+7. Student Welfare
+
+The student welfare office coordinates selected welfare and student-support activities.
+
+8. Accommodation
+
+Accommodation services, where available, operate according to published eligibility and application procedures.
+
+9. Transport
+
+Institutional transport services, where provided, operate according to published routes and schedules.
+
+10. Emergency Contacts
+
+Students should use the designated institutional emergency and security channels when immediate assistance is required.

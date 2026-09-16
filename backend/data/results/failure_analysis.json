@@ -1,0 +1,784 @@
+[
+  {
+    "id": "q007",
+    "language": "en",
+    "question_type": "factual",
+    "question": "Can students access subscription databases using their university account?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-0"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 1,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-0",
+      "university_student_handbook-2",
+      "library_regulations-3",
+      "library_regulations-4",
+      "library_regulations-1"
+    ],
+    "dense_top5": [
+      "university_student_handbook-3",
+      "university_student_handbook-6",
+      "university_student_handbook-2",
+      "institutional_services_guide-1",
+      "university_student_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-0",
+      "university_student_handbook-2",
+      "library_regulations-4",
+      "university_student_handbook-3",
+      "institutional_services_guide-1"
+    ]
+  },
+  {
+    "id": "q008",
+    "language": "en",
+    "question_type": "factual",
+    "question": "What account can students use to access subscription databases?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-0"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 1,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-0",
+      "library_regulations-3",
+      "library_regulations-4",
+      "university_student_handbook-4",
+      "university_student_handbook-3"
+    ],
+    "dense_top5": [
+      "library_regulations-4",
+      "institutional_services_guide-1",
+      "university_student_handbook-4",
+      "university_student_handbook-3",
+      "university_student_handbook-6"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-0",
+      "library_regulations-4",
+      "university_student_handbook-4",
+      "university_student_handbook-3",
+      "institutional_services_guide-1"
+    ]
+  },
+  {
+    "id": "q013",
+    "language": "en",
+    "question_type": "list",
+    "question": "What sections belong in a normal project report?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 4,
+    "dense_rank": 1,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-1",
+      "course_module_handbook-2",
+      "sample_multilingual_handbook-2",
+      "faculty_handbook-3"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-2",
+      "course_module_handbook-4",
+      "faculty_handbook-3",
+      "research_innovation_policy-4",
+      "research_innovation_policy-2"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-2",
+      "course_module_handbook-1",
+      "faculty_handbook-3"
+    ]
+  },
+  {
+    "id": "q015",
+    "language": "en",
+    "question_type": "procedural",
+    "question": "What should be included after the results section of a project report?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 6,
+    "dense_rank": 1,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-1",
+      "academic_calendar-3",
+      "examination_regulations-4",
+      "course_module_handbook-1",
+      "course_module_handbook-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-2",
+      "course_module_handbook-4",
+      "research_innovation_policy-4",
+      "course_module_handbook-1",
+      "course_module_handbook-5"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-2",
+      "examination_regulations-4",
+      "course_module_handbook-1",
+      "sample_multilingual_handbook-1",
+      "academic_calendar-3"
+    ]
+  },
+  {
+    "id": "q017",
+    "language": "en",
+    "question_type": "factual",
+    "question": "Who can specify a different report format?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 10,
+    "dense_rank": 1,
+    "hybrid_rank": 2,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "library_regulations-4",
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-2",
+      "course_module_handbook-3",
+      "sample_multilingual_handbook-0"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-4",
+      "research_innovation_policy-4",
+      "university_student_handbook-6",
+      "README_SYNTHETIC_CORPUS-0"
+    ],
+    "hybrid_top5": [
+      "library_regulations-4",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-2",
+      "examination_regulations-2"
+    ]
+  },
+  {
+    "id": "q019",
+    "language": "en",
+    "question_type": "factual",
+    "question": "What is the usual final section of a project report?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 9,
+    "dense_rank": 1,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-5",
+      "course_module_handbook-1",
+      "research_innovation_policy-4",
+      "course_module_handbook-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-2",
+      "course_module_handbook-4",
+      "research_innovation_policy-4",
+      "course_module_handbook-2",
+      "course_module_handbook-6"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-1",
+      "course_module_handbook-5",
+      "research_innovation_policy-4",
+      "course_module_handbook-2"
+    ]
+  },
+  {
+    "id": "q020",
+    "language": "en",
+    "question_type": "factual",
+    "question": "What is the purpose of the university handbook information about the library?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-0"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-0",
+      "university_student_handbook-0",
+      "scholarship_student_support-2",
+      "university_student_handbook-1",
+      "university_student_handbook-2"
+    ],
+    "dense_top5": [
+      "university_student_handbook-3",
+      "university_student_handbook-4",
+      "README_SYNTHETIC_CORPUS-0",
+      "institutional_services_guide-0",
+      "sample_multilingual_handbook-0"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-0",
+      "university_student_handbook-3",
+      "university_student_handbook-4",
+      "university_student_handbook-0",
+      "university_student_handbook-5"
+    ]
+  },
+  {
+    "id": "q021",
+    "language": "si",
+    "question_type": "temporal",
+    "question": "විශ්වවිද්‍යාල පුස්තකාලය සතියේ දිනවල විවෘතව පවතින්නේ කුමන වේලාවටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q022",
+    "language": "si",
+    "question_type": "factual",
+    "question": "සතියේ දිනවල පුස්තකාලය විවෘත වන්නේ කීයටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-3",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q023",
+    "language": "si",
+    "question_type": "factual",
+    "question": "සතියේ දිනවල විශ්වවිද්‍යාල පුස්තකාලය වසා දමන්නේ කීයටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-3",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q024",
+    "language": "si",
+    "question_type": "temporal",
+    "question": "සති අන්තයේ පුස්තකාලය විවෘතව පවතින වේලාව කුමක්ද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 2,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "library_regulations-0"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q025",
+    "language": "si",
+    "question_type": "factual",
+    "question": "සති අන්තයේ පුස්තකාලය විවෘත වන්නේ කීයටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-3",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q026",
+    "language": "si",
+    "question_type": "factual",
+    "question": "සති අන්තයේ පුස්තකාලය වසා දමන්නේ කීයටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-2"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": null,
+    "hybrid_rank": 2,
+    "case": "bm25_only",
+    "bm25_top5": [
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-3",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q028",
+    "language": "si",
+    "question_type": "list",
+    "question": "පරිගණක විද්‍යාගාරය විවෘතව පවතින්නේ කුමන දිනවලද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-3"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 4,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-2",
+      "academic_calendar-0",
+      "academic_calendar-1"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q029",
+    "language": "si",
+    "question_type": "temporal",
+    "question": "පරිගණක විද්‍යාගාරය සතියේ දිනවල විවෘතව පවතින වේලාව කුමක්ද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-3"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 4,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-2",
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5"
+    ]
+  },
+  {
+    "id": "q032",
+    "language": "si",
+    "question_type": "procedural",
+    "question": "ව්‍යාපෘති වාර්තාවකට සාමාන්‍යයෙන් ඇතුළත් කළ යුතු කොටස් මොනවාද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q033",
+    "language": "si",
+    "question_type": "factual",
+    "question": "ව්‍යාපෘති වාර්තාවක ක්‍රමවේද කොටස තිබිය යුතුද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2",
+      "academic_calendar-3"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q034",
+    "language": "si",
+    "question_type": "factual",
+    "question": "ව්‍යාපෘති වාර්තාවක ප්‍රතිඵලවලට පසුව ඇතුළත් වන කොටස කුමක්ද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2",
+      "academic_calendar-3"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q035",
+    "language": "si",
+    "question_type": "procedural",
+    "question": "වාර්තා ඉදිරිපත් කළ යුතු සාමාන්‍ය ආකෘතිය කුමක්ද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 2,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q036",
+    "language": "si",
+    "question_type": "factual",
+    "question": "වෙනත් වාර්තා ආකෘතියක් සඳහන් කළ හැක්කේ කාටද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 2,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q037",
+    "language": "si",
+    "question_type": "factual",
+    "question": "ව්‍යාපෘති වාර්තාවක සාමාන්‍යයෙන් අවසානයේ ඇතුළත් වන කොටස කුමක්ද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 5,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2",
+      "academic_calendar-3"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-4"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3"
+    ]
+  },
+  {
+    "id": "q040",
+    "language": "si",
+    "question_type": "factual",
+    "question": "ව්‍යාපෘති වාර්තාවක් PDF ලෙස ඉදිරිපත් කිරීම අනිවාර්යද?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-4"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 4,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-2",
+      "academic_calendar-0"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-3"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-4",
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-7",
+      "sample_multilingual_handbook-6",
+      "sample_multilingual_handbook-2"
+    ]
+  },
+  {
+    "id": "q042",
+    "language": "ta",
+    "question_type": "temporal",
+    "question": "வார நாட்களில் நூலகம் எத்தனை மணிக்கு திறக்கிறது?",
+    "relevant_chunk_ids": [
+      "sample_multilingual_handbook-5"
+    ],
+    "bm25_rank": 1,
+    "dense_rank": 6,
+    "hybrid_rank": 1,
+    "case": "ranking_gap",
+    "bm25_top5": [
+      "sample_multilingual_handbook-5",
+      "academic_calendar-0",
+      "academic_calendar-1",
+      "academic_calendar-2",
+      "academic_calendar-3"
+    ],
+    "dense_top5": [
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-0",
+      "library_regulations-0",
+      "library_regulations-1",
+      "sample_multilingual_handbook-6"
+    ],
+    "hybrid_top5": [
+      "sample_multilingual_handbook-5",
+      "sample_multilingual_handbook-3",
+      "sample_multilingual_handbook-0",
+      "library_regulations-0",
+      "library_regulations-1"
+    ]
+  }
+]
